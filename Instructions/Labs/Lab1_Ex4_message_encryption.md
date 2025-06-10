@@ -24,6 +24,14 @@ Dans cette tâche, vous allez vérifier la fonctionnalité Azure RMS correcte de
 
 1. Ouvrez PowerShell en cliquant avec le bouton droit sur le bouton Démarrer dans la barre des tâches et en sélectionnant **Terminal**.
 
+1. Exécutez le cmdlet **Install Module** pour installer la dernière version du module **Exchange Online PowerShell** :
+
+    ```powershell
+    Install-Module ExchangeOnlineManagement
+    ```
+
+1. Confirmez la boîte de dialogue de sécurité du référentiel non approuvé en appuyant sur **Y** pour Oui, puis appuyez sur **Entrée**.  Ce processus peut prendre un certain temps.
+
 1. Exécutez le cmdlet **Connect-ExchangeOnline** pour utiliser le module Exchange Online PowerShell et vous connecter à votre locataire :
 
     ```powershell
@@ -93,6 +101,8 @@ Vous avez correctement désactivé les fournisseurs d’identité sociaux, ce qu
 ## Tâche 3 : valider le comportement de personnalisation par défaut
 
 Vous devez confirmer qu’aucune boîte de dialogue d’ID social n’est affichée pour les destinataires externes lors de la réception d’un message protégé par le chiffrement de messages Office 365 auprès des utilisateurs de votre locataire et qu’ils doivent utiliser le protocole OTP à tout moment pour accéder au contenu chiffré.
+
+> [!alert] La diffusion d’e-mails externes peut être bloquée dans certains environnements de labo. Cette tâche peut ne pas se terminer comme prévu.
 
 1. Vous devez toujours avoir une connexion active à votre machine virtuelle Client 1 (SC-401-CL1) en tant que **SC-401-CL1\admin**.
 
@@ -187,6 +197,8 @@ Vous avez configuré une règle de transport qui garantit que les e-mails du ser
 ## Tâche 5 : valider le comportement de personnalisation sur mesure
 
 Pour valider la nouvelle configuration personnalisée, vous devez utiliser à nouveau le compte de Lynne Robbins, membre de l’équipe financière.
+
+> [ !alert] Les restrictions d’e-mails externes peuvent empêcher la réception de ce message. La personnalisation peut ne pas apparaître comme prévu.
 
 1. Revenez à **Microsoft Edge** avec la fenêtre InPrivate Outlook sur le web où vous devriez toujours avoir une connexion en tant que **Lynne Robbins**.
 

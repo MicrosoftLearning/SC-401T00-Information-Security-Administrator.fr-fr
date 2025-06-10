@@ -60,7 +60,7 @@ Dans cette tâche, vous allez créer une étiquette de confidentialité parent p
 
 1. Cliquez sur **Suivant**.
 
-1. Dans la page **Définir l’étendue de cette étiquette**, sélectionnez **Éléments**, puis **Fichiers** et **E-mails**. Si la case **Réunions** est cochée, décochez-la.
+1. Dans la page **Définir l’étendue de cette étiquette**, sélectionnez **Fichiers** et **E-mails**. Si la case **Réunions** est cochée, décochez-la.
 
 1. Cliquez sur **Suivant**.
 
@@ -93,7 +93,7 @@ Maintenant que vous disposez d’une étiquette de base, vous allez créer une s
 
 1. Cliquez sur **Suivant**.
 
-1. Dans la page **Définir l’étendue de cette étiquette**, sélectionnez **Éléments**, puis **Fichiers** et **E-mails**. Si la case **Réunions** est cochée, décochez-la.
+1. Dans la page **Définir l’étendue de cette étiquette**, sélectionnez **Fichiers** et **E-mails**. Si la case **Réunions** est cochée, décochez-la.
 
 1. Cliquez sur **Suivant**.
 
@@ -163,7 +163,7 @@ Vous allez maintenant publier l’étiquette de confidentialité interne et RH a
 
 1. Sur la page **Paramètres par défaut des réunions et des événements de calendrier**, sélectionnez **Suivant**.
 
-1. Sur la page **Paramètres par défaut du contenu Power BI**, sélectionnez **Suivant**.
+1. Sur la page **Paramètres par défaut du contenu Fabric et Power BI**, sélectionnez **Suivant**.
 
 1. Sur la page **Nommer votre stratégie**, saisissez :
 
@@ -202,7 +202,7 @@ Dans cette tâche, vous allez créer une étiquette de confidentialité pour les
 
 1. Cliquez sur **Suivant**.
 
-1. Dans la page **Définir l’étendue de cette étiquette**, sélectionnez **Éléments**, puis **Fichiers** et **E-mails**. Si la case **Réunions** est cochée, décochez-la.
+1. Dans la page **Définir l’étendue de cette étiquette**, sélectionnez **Fichiers** et **E-mails**. Si la case **Réunions** est cochée, décochez-la.
 
 1. Cliquez sur **Suivant**.
 
@@ -262,9 +262,9 @@ Dans cette tâche, vous allez créer une étiquette de confidentialité pour les
 
 Vous avez créé une étiquette de confidentialité pour les données financières et configuré une stratégie d’étiquetage automatique pour détecter et étiqueter le contenu qui contient des informations financières sensibles.
 
-## Tâche 6 : créer et publier une étiquette DKE pour du contenu hautement confidentiel
+## Tâche 6 : créer et publier une étiquette DKE pour du contenu confidentiel
 
-Dans cette tâche, vous allez créer une sous-étiquette sous l’étiquette intégrée Hautement confidentiel. Cette sous-étiquette utilise le chiffrement à clé double (DKE) et le filigrane dynamique pour protéger le contenu sensible accessible uniquement par le service juridique. Vous allez également configurer une stratégie d’étiquette qui nécessite une justification pour la rétrogradation de l’étiquette.
+Dans cette tâche, vous allez créer une sous-étiquette sous l’étiquette interne. Cette sous-étiquette utilise le chiffrement à clé double (DKE) et le filigrane dynamique pour protéger le contenu sensible accessible uniquement par le service juridique. Vous allez également configurer une stratégie d’étiquette qui nécessite une justification pour la rétrogradation de l’étiquette.
 
 1. Vous devez toujours avoir une connexion active à la machine virtuelle Client 1 (SC-401-CL1) en tant que compte **SC-401-cl1\admin**.
 
@@ -272,7 +272,7 @@ Dans cette tâche, vous allez créer une sous-étiquette sous l’étiquette int
 
 1. Dans le portail Microsoft Purview, sélectionnez **Solutions** > **Protection des données** > **Étiquettes de confidentialité**.
 
-1. Dans la page **Étiquettes de confidentialité**, recherchez l’étiquette de confidentialité **Hautement confidentiel**. Sélectionnez les points de suspension verticaux (**...**), puis sélectionnez **+ Créer une sous-étiquette** dans le menu déroulant.
+1. Sur la page **Étiquettes de confidentialité**, recherchez l’étiquette de confidentialité **Interne**. Sélectionnez les points de suspension verticaux (**...**), puis sélectionnez **+ Créer une sous-étiquette** dans le menu déroulant.
 
 1. Sur la page **Fournir des détails de base pour cette étiquette**, saisissez :
 
@@ -423,7 +423,7 @@ Maintenant que l’analyse des étiquettes est activée, vous allez créer une s
 
       - Cochez la case pour **Appliquer l’étiquette de confidentialité**.
 
-      - Sélectionnez **Général-Tout le monde (sans restriction)** dans la liste déroulante.
+      - Sélectionnez **Hautement confidentiel-Project Falcon** dans la liste déroulante.
 
 1. Sélectionnez **Créer** pour terminer la création de la stratégie de fichier.
 

@@ -153,7 +153,7 @@ Dans cette tâche, vous allez activer l’intégration entre Microsoft Defender 
 
 1. Dans le volet de navigation de gauche, sélectionnez **Paramètres** > **Points de terminaison** > **Fonctionnalités avancées**.
 
-1. Faites défiler vers le bas et sélectionnez le bouton bascule sur **Activé** pour **Partager des points de terminaison avec le centre de conformité Microsoft**.
+1. Faites défiler vers le bas et basculez le bouton sur **Activé** pour **Partager les alertes des points de terminaison avec le Centre de conformité Microsoft**.
 
    ![Capture d’écran montrant les points de terminaison de partage avec le bouton bascule du centre de conformité Microsoft.](../Media/enable-irm-in-mde.png)
 
@@ -164,6 +164,8 @@ Vous avez activé Defender pour points de terminaison pour partager des alertes 
 ## Tâche 6 : activer les indicateurs et configurer les utilisateurs prioritaires
 
 Dans cette tâche, vous allez configurer les indicateurs de stratégie et créer un groupe d’utilisateurs prioritaires qui peut être utilisé dans les stratégies de risques internes.
+
+> [!note] Les indicateurs Microsoft Defender pour point de terminaison peuvent apparaître grisés et impossibles à sélectionner si l’intégration de la tâche précédente n’a pas terminé le traitement. Dans ce cas, attendez quelques minutes et actualisez la page avant de continuer.
 
 1. Dans **Microsoft Edge**, accédez à `https://purview.microsoft.com`.
 

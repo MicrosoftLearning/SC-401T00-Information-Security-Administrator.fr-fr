@@ -19,7 +19,7 @@ Joni Sherman, l’administrateur de sécurité de l’information nouvellement 
 
 Dans cette tâche, vous allez intégrer un appareil Windows 11 afin qu’il soit prêt à être protégé par des stratégies DLP de point de terminaison.
 
-1. Connectez-vous à **la machine virtuelle Client 2 (SC-401-CL2)** en tant que compte **SC-401-cl1\admin**.
+1. Connectez-vous à **la machine virtuelle Client 2 (SC-401-CL2)** en tant que compte **SC-401-cl2\admin**.
 
 1. Dans Microsoft Edge, accédez à **`https://purview.microsoft.com`** et connectez-vous au portail Microsoft Purview en tant que **Joni Sherman**. Connectez-vous en tant que `JoniS@WWLxZZZZZZ.onmicrosoft.com` (où ZZZZZZ est votre ID de locataire unique fourni par votre fournisseur d’hébergement de labo). Le mot de passe de Joni a été défini dans un exercice précédent.
 

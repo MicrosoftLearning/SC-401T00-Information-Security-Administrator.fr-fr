@@ -62,8 +62,6 @@ Dans cette tâche, vous allez vous connecter en tant que Joni Sherman pour expl
 
 1. Un message à propos du nouveau portail Microsoft Purview s’affiche à l’écran. Sélectionnez **Démarrer** pour accéder au nouveau portail.
 
-    ![Capture d’écran de l’écran Bienvenue sur le nouveau portail de conformité Microsoft Purview.](../Media/welcome-purview-portal.png)
-
 1. Familiarisez-vous avec le nouveau portail Microsoft Purview. Lorsque vous avez terminé, laissez la fenêtre du navigateur ouverte.
 
 Vous avez basculé vers le compte de Joni Sherman et êtes maintenant en mesure de démarrer le labo.
