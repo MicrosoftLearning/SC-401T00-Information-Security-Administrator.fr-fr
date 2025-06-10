@@ -165,8 +165,6 @@ Vous avez activé Defender pour points de terminaison pour partager des alertes 
 
 Dans cette tâche, vous allez configurer les indicateurs de stratégie et créer un groupe d’utilisateurs prioritaires qui peut être utilisé dans les stratégies de risques internes.
 
-> [!note] Les indicateurs Microsoft Defender pour point de terminaison peuvent apparaître grisés et impossibles à sélectionner si l’intégration de la tâche précédente n’a pas terminé le traitement. Dans ce cas, attendez quelques minutes et actualisez la page avant de continuer.
-
 1. Dans **Microsoft Edge**, accédez à `https://purview.microsoft.com`.
 
 1. Sélectionnez **Paramètres** > **Gestion des risques internes**.

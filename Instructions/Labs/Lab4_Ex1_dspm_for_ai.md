@@ -108,7 +108,7 @@ Vous pouvez réduire davantage les risques en empêchant Copilot de traiter ou d
 
 1. Dans Microsoft Purview, accédez à **DSPM pour l’IA** en sélectionnant **Solutions** > **DSPM pour l’IA** > **Recommandations**.
 
-1. Sélectionnez la recommandation **Protéger les données sensibles référencées dans la recommandation Microsoft 365 Copilot (préversion)**.
+1. Sélectionnez la recommandation **Protéger les données sensibles référencées dans Copilot et les réponses de l’assistant**.
 
 1. Passez en revue les conseils fournis dans cette recommandation.
 
@@ -144,19 +144,19 @@ Vous pouvez réduire davantage les risques en empêchant Copilot de traiter ou d
 
 1. Revenez à **Recommandations DSPM pour l’IA** en sélectionnant **Solutions** > **DSPM pour l’IA** > **Recommandations**.
 
-1. Sélectionnez la recommandation **Protéger les données sensibles référencées dans microsoft 365 Copilot (préversion)**, puis sélectionnez **Marquer comme terminé**.
+1. Sélectionnez la recommandation **Protéger les données sensibles référencées dans Copilot et les réponses de l’assistant**, puis sélectionnez **Marquer comme terminé**.
 
 Vous avez créé une stratégie DLP qui empêche l’utilisation du contenu étiqueté dans les invites et réponses Copilot.
 
-## Tâche 4 : exécuter une évaluation des données pour détecter le contenu sans étiquette
+## Tâche 4 – Exécuter une évaluation des risques liés aux données pour détecter le contenu non étiqueté
 
-Pour comprendre les lacunes potentielles dans la couverture de l’étiquetage, vous allez exécuter une évaluation des données pour identifier les fichiers sans étiquettes de confidentialité accessibles par Copilot.
+Pour comprendre les lacunes potentielles dans la couverture d’étiquetage, vous allez exécuter une évaluation des risques liés aux données afin d’identifier les fichiers sans étiquettes de confidentialité pouvant être consultés par Copilot.
 
-1. Dans **DSPM pour l’IA**, sélectionnez la recommandation intitulée **Protéger les données sensibles référencées dans les réponses Copilot**.
+1. Dans **DSPM pour l’IA**, sélectionnez la recommandation intitulée **Protéger les données sensibles référencées dans les réponses de Copilot et de l’assistant**.
 
-1. Dans le volet **Protéger les données sensibles référencées dans les réponses Copilot**, passez en revue le résumé, puis sélectionnez **Accéder aux évaluations**.
+1. Dans le volet **Protéger les données sensibles référencées dans les réponses de Copilot et de l’agent**, examinez le résumé, puis sélectionnez **Accéder aux évaluations**.
 
-1. Dans la page **Évaluations des données (préversion)**, sélectionnez **Créer une évaluation (préversion)**.
+1. Sur la page **Évaluations des risques liés aux données**, sélectionnez **Créer une évaluation personnalisée**
 
 1. Dans la page **Détails de base**, entrez :
 
@@ -173,4 +173,4 @@ Pour comprendre les lacunes potentielles dans la couverture de l’étiquetage, 
 
 1. Dans la page **Évaluation des données créée avec succès**, sélectionnez **Terminé**.
 
-Vous avez maintenant utilisé Microsoft Purview DSPM pour l’IA pour détecter les risques liés à l’IA, appliquer des stratégies et évaluer l’exposition des données sensibles, ce qui aide votre organisation à utiliser l’IA en toute sécurité.
+Vous avez maintenant utilisé Microsoft Purview DSPM for AI pour détecter les risques liés à l’IA, appliquer des stratégies et évaluer l’exposition des données sensibles, contribuant ainsi à une utilisation sécurisée de l’IA par votre organisation.

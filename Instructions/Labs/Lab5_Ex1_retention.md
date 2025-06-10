@@ -89,7 +89,7 @@ Dans cette tâche, vous allez publier l’étiquette de rétention afin que les 
 1. Sur la page **Nommer votre stratégie**, saisissez :
 
     - **Nom :** `Sensitive Financial Data Retention`
-    - **Description** : `Makes the 'Sensitive Financial Records' label available to users in Exchange, SharePoint, and OneDrive.`
+    - **Description** : `Makes the 'Sensitive Financial Records' label available to users in Exchange, SharePoint, OneDrive, and Teams.`
 
 1. Cliquez sur **Suivant**.
 
