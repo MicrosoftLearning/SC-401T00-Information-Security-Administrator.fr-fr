@@ -14,14 +14,15 @@ Vous n’êtes pas autorisé à convertir un locataire en abonnement payant. Les
 
 # Configuration du labo : préparer votre environnement pour l’administration
 
-Dans ce labo, vous allez configurer et préparer votre environnement pour les tâches d’administration. Vous allez activer les fonctionnalités nécessaires, configurer les autorisations d’administration et vous assurer de la bonne configuration des éléments essentiels.
+Dans ce labo, vous allez configurer et préparer votre environnement pour les tâches d’administration. Vous allez activer les fonctionnalités requises, configurer les autorisations et préparer les services principaux pour l’administration.
 
 **Tâches :**
 
-1. Activer l’audit dans le portail Microsoft Purview
-1. Définir des mots de passe d’utilisation pour les exercices de labo
-1. Activer l’intégration des appareils
-1. Activer l’analytique des risques internes
+1. Activer l’audit dans le portail Microsoft Purview  
+1. Activer l’intégration des appareils  
+1. Activer l’analytique et le partage de données des risques internes  
+1. Définir des mots de passe d’utilisation pour les exercices de labo  
+1. Initialiser Microsoft Defender XDR
 
 ## Tâche 1 : activer l’audit dans le portail Microsoft Purview
 
@@ -53,7 +54,7 @@ Dans cette tâche, vous allez activer l’audit dans le portail Microsoft Purvie
     Install-Module ExchangeOnlineManagement
     ```
 
-1. Confirm the NuGet provider prompt  by typing **Y** for Yes and press **Enter**.
+1. Confirm the NuGet provider prompt by typing **Y** for Yes and press **Enter**.
 
 1. Confirm the Untrusted repository security dialog with **Y** for Yes and press **Enter**.  This process may take some time to complete.
 
@@ -101,13 +102,63 @@ Dans cette tâche, vous allez activer l’audit dans le portail Microsoft Purvie
 
 Vous avez activé l’audit dans Microsoft 365.
 
-## Tâche 2 : définir les mots de passe d’utilisation pour les exercices de labo
+## Tâche 2 : activer l’intégration des appareils
+
+Dans cette tâche, vous allez activer l’intégration des appareils pour votre organisation.
+
+1. Vous devez toujours avoir une connexion active à la machine virtuelle Client 1 (SC-401-CL1) en tant que compte **SC-401-CL1\admin** et une connexion active en tant qu’administrateur ou administratrice MOD dans Microsoft 365.
+
+1. Dans **Microsoft Edge**, accédez à **`https://purview.microsoft.com`** pour vous connecter à Microsoft Purview, puis sélectionnez **Paramètres** dans la barre latérale gauche.
+
+1. Dans la barre latérale gauche, développez **Intégration de l’appareil**, puis sélectionnez **Appareils**.
+
+1. Dans la page **Appareils**, sélectionnez **Activer l’intégration des appareils**, puis sélectionnez **OK** pour activer l’intégration de l’appareil.
+
+1. Lorsque vous en recevez l’invitation, sélectionnez **OK** pour confirmer que la surveillance de l’appareil est activée.
+
+Vous avez maintenant activé l’intégration d’appareils et pouvez commencer à intégrer des appareils à protéger avec des stratégies DLP de point de terminaison. Le processus d’activation de la fonctionnalité peut prendre jusqu’à 30 minutes.
+
+## Tâche 3 : activer l’analyse des risques internes et le partage de données
+
+Dans cette tâche, vous allez activer l’analytique et le partage de données pour la gestion des risques internes.
+
+1. Vous devez toujours avoir une connexion active à la machine virtuelle Client 1 (SC-401-CL1) en tant que compte **SC-401-CL1\admin** et une connexion active en tant qu’administrateur ou administratrice MOD dans Microsoft Purview.
+
+1. Dans Microsoft Purview, accédez à **Paramètres** > **Gestion des risques internes** > **Analytique**.
+
+1. Basculez ces paramètres sur **Activé** :
+
+   - **Afficher des insights au niveau du locataire**
+
+   - **Afficher des insights au niveau de l’utilisateur**
+
+1. Sélectionnez **Enregistrer** au bas de la page.
+
+1. Dans le volet de navigation de gauche, sélectionnez **Partage de données**.
+
+1. Dans la section Partage de données, basculez **Partager les détails des risques utilisateur avec d’autres solutions de sécurité** sur **Activé**.
+
+1. Sélectionnez **Enregistrer** au bas de la page.
+
+Vous avez activé l’analytique et le partage de données pour la gestion des risques internes.
+
+## Tâche 4 : définir les mots de passe des utilisateurs pour les exercices du labo
 
 Dans cette tâche, vous allez définir des mots de passe pour les comptes d’utilisation nécessaires pour les labos.
 
-1. Connectez-vous à la machine virtuelle Client 1 (SC-401-CL1) en tant que compte **SC-401-CL1\admin**. Le mot de passe doit vous être fourni par votre fournisseur d’hébergement de labo.
+1. Vous devez toujours avoir une connexion active à la machine virtuelle Client 1 (SC-401-CL1) en tant que compte **SC-401-CL1\admin** et une connexion active en tant qu’administrateur ou administratrice MOD dans Microsoft 365.
 
 1. Ouvrez **Microsoft Edge** et accédez à **`https://admin.microsoft.com`** pour vous connecter au Centre d’administration Microsoft 365 en tant qu’administrateur MOD, `admin@WWLxZZZZZZ.onmicrosoft.com` (où ZZZZZZ est votre ID de locataire unique fourni par votre fournisseur d’hébergement de labo).
+
+> [!note] **Note** : dans certains locataires, une invite d’activation MFA peut s’afficher lors de la connexion au portail. Si cette invite s’affiche :
+> - Sélectionnez **Reporter la MFA** pour différer temporairement la configuration de l’authentification multifacteur.
+>
+>   ![Capture d’écran montrant l’option de report de la MFA.](../Media/postpone-mfa.png)
+> - Sélectionnez **Confirmer le report**.
+>
+> - Sélectionnez **Poursuivre la connexion sans MFA** pour accéder au centre d’administration.
+>
+> Cela reporte l’activation de la MFA pour le locataire et vous permet de continuer le labo.
 
 1. Dans le volet de navigation de gauche, développez **Utilisateurs**, puis sélectionnez **Utilisateurs actifs**.
 
@@ -133,46 +184,6 @@ Dans cette tâche, vous allez définir des mots de passe pour les comptes d’ut
 
 Vous avez correctement réinitialisé les mots de passe pour les exercices de labo.
 
-## Tâche 3 : activer l’intégration des appareils
-
-Dans cette tâche, vous allez activer l’intégration des appareils pour votre organisation.
-
-1. Vous devez toujours avoir une connexion active à la machine virtuelle Client 1 (SC-401-CL1) en tant que compte **SC-401-CL1\admin** et une connexion active en tant qu’administrateur ou administratrice MOD dans Microsoft 365.
-
-1. Dans **Microsoft Edge**, accédez à **`https://purview.microsoft.com`** pour vous connecter à Microsoft Purview, puis sélectionnez **Paramètres** dans la barre latérale gauche.
-
-1. Dans la barre latérale gauche, développez **Intégration de l’appareil**, puis sélectionnez **Appareils**.
-
-1. Dans la page **Appareils**, sélectionnez **Activer l’intégration des appareils**, puis sélectionnez **OK** pour activer l’intégration de l’appareil.
-
-1. Lorsque vous en recevez l’invitation, sélectionnez **OK** pour confirmer que la surveillance de l’appareil est activée.
-
-Vous avez maintenant activé l’intégration d’appareils et pouvez commencer à intégrer des appareils à protéger avec des stratégies DLP de point de terminaison. Le processus d’activation de la fonctionnalité peut prendre jusqu’à 30 minutes.
-
-## Tâche 4 : activer l’analytique et le partage de données des risques internes
-
-Dans cette tâche, vous allez activer l’analytique et le partage de données pour la gestion des risques internes.
-
-1. Vous devez toujours avoir une connexion active à la machine virtuelle Client 1 (SC-401-CL1) en tant que compte **SC-401-CL1\admin** et une connexion active en tant qu’administrateur ou administratrice MOD dans Microsoft Purview.
-
-1. Dans Microsoft Purview, accédez à **Paramètres** > **Gestion des risques internes** > **Analytique**.
-
-1. Basculez ces paramètres sur **Activé** :
-
-   - **Afficher des insights au niveau du locataire**
-
-   - **Afficher des insights au niveau de l’utilisateur**
-
-1. Sélectionnez **Enregistrer** au bas de la page.
-
-1. Dans le volet de navigation de gauche, sélectionnez **Partage de données**.
-
-1. Dans la section Partage de données, basculez **Partager les détails des risques utilisateur avec d’autres solutions de sécurité** sur **Activé**.
-
-1. Sélectionnez **Enregistrer** au bas de la page.
-
-Vous avez activé l’analytique et le partage de données pour la gestion des risques internes.
-
 ## Tâche 5 : initialiser Microsoft Defender XDR
 
 Dans cette tâche, vous allez ouvrir Microsoft Defender et attendre que Microsoft Defender XDR termine l’initialisation.
@@ -182,6 +193,8 @@ Dans cette tâche, vous allez ouvrir Microsoft Defender et attendre que Microsof
 1. Dans **Microsoft Edge**, accédez à **`https://security.microsoft.com/`** l’ouverture de Microsoft Defender.
 
 1. Dans le volet de navigation, sélectionnez **Investigation et réponse** > **Incidents et alertes** > **Incidents**.
+
+> [!note] **Remarque** : l’écran d’initialisation de Microsoft Defender XDR peut apparaître ou non selon votre locataire de labo. S’il s’affiche, vous pouvez continuer les autres tâches pendant que l’initialisation se termine en arrière-plan.
 
 1. Vous verrez un message indiquant que Microsoft Defender XDR est en cours de préparation. Ce processus s’exécute automatiquement et peut prendre quelques minutes.
 

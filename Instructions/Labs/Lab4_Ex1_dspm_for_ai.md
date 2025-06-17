@@ -20,7 +20,7 @@ Vous êtes Joni Sherman, administrateur de la sécurité des informations pour 
 
 1. Utiliser DSPM pour l’IA pour créer une stratégie DLP pour les sites d’IA générative
 1. Créer une stratégie de risque interne pour détecter les interactions avec l’IA risquées
-1. (Facultatif) Empêcher Copilot d’accéder au contenu étiqueté
+1. Empêcher Copilot d’accéder au contenu étiqueté
 1. Exécuter une évaluation des données pour détecter le contenu sans étiquette
 
 ## Tâche 1 : utiliser DSPM pour l’IA pour créer une stratégie DLP pour les sites d’IA générative
@@ -55,7 +55,8 @@ Pour réduire le risque de perte de données par le biais d’assistants IA, vou
 
 1. Passez en revue la configuration de la règle créée par DSPM pour l’IA :
    - Sous **Conditions**, notez les types d’informations sensibles inclus et que la règle utilise la **Protection adaptative** en fonction du risque élevé.
-   - Sous **Actions**, vérifiez que l’option **Activités de domaine et de navigateur de service** est définie sur **Bloquer avec remplacement** pour les **Sites web d’IA générative**.
+   - Sous **Actions**, pour les activités de chargement et de collage, sélectionnez **Modifier** à côté de **Restrictions du groupe de domaines de service sensibles**.
+   - Dans la configuration du groupe de domaines de service, vérifiez que **Sites Web d’IA générative** est défini sur **Bloquer avec possibilité de dérogation**. 
 
 1. Sélectionnez **Annuler** pour quitter l’éditeur de règle sans modification.
 
@@ -102,13 +103,13 @@ Vérifiez que l’événement déclencheur est **Compte d’utilisation supprim�
 
 Vous avez créé une stratégie qui détecte les interactions avec l’IA risquées, y compris les invites et les réponses, pour vous aider à identifier les signes précoces du comportement de l’utilisateur ou de l’utilisatrice à risque.
 
-## Tâche 3 : (facultative) empêcher Copilot d’accéder au contenu étiqueté
+## Tâche 3 : empêcher Copilot d’accéder au contenu étiqueté
 
 Vous pouvez réduire davantage les risques en empêchant Copilot de traiter ou de répondre avec du contenu protégé par des étiquettes de confidentialité.
 
 1. Dans Microsoft Purview, accédez à **DSPM pour l’IA** en sélectionnant **Solutions** > **DSPM pour l’IA** > **Recommandations**.
 
-1. Sélectionnez la recommandation **Protéger les données sensibles référencées dans Copilot et les réponses de l’assistant**.
+1. Sélectionnez la recommandation **Protéger les données sensibles référencées dans Microsoft 365 Copilot et les agents (préversion)**.
 
 1. Passez en revue les conseils fournis dans cette recommandation.
 
@@ -129,9 +130,9 @@ Vous pouvez réduire davantage les risques en empêchant Copilot de traiter ou d
 
    - **Nom :** `Prevent Copilot from accessing labeled data`
    - Sous **Conditions**, sélectionnez **Ajouter une condition** > **Le contenu contient** > **Étiquettes de confidentialité**. Ajoutez ces étiquettes de confidentialité :
-     - `Internal`
-     - `Confidential`
-     - `Highly Confidential`
+     - `Trusted People`
+     - `Project - Falcon`
+     - `Financial Data`
    - Sélectionnez **Ajouter**
    - Sous **Actions**, sélectionnez **Ajouter une action** > **Empêcher Copilot de traiter le contenu (préversion)**.
    - En bas du panneau volant **Créer une règle**, sélectionnez **Enregistrer**.
@@ -144,7 +145,7 @@ Vous pouvez réduire davantage les risques en empêchant Copilot de traiter ou d
 
 1. Revenez à **Recommandations DSPM pour l’IA** en sélectionnant **Solutions** > **DSPM pour l’IA** > **Recommandations**.
 
-1. Sélectionnez la recommandation **Protéger les données sensibles référencées dans Copilot et les réponses de l’assistant**, puis sélectionnez **Marquer comme terminé**.
+1. Sélectionnez la recommandation **Protéger les données sensibles référencées dans Microsoft 365 Copilot et les agents (préversion)**, puis sélectionnez **Marquer comme terminé**.
 
 Vous avez créé une stratégie DLP qui empêche l’utilisation du contenu étiqueté dans les invites et réponses Copilot.
 
@@ -152,9 +153,9 @@ Vous avez créé une stratégie DLP qui empêche l’utilisation du contenu éti
 
 Pour comprendre les lacunes potentielles dans la couverture d’étiquetage, vous allez exécuter une évaluation des risques liés aux données afin d’identifier les fichiers sans étiquettes de confidentialité pouvant être consultés par Copilot.
 
-1. Dans **DSPM pour l’IA**, sélectionnez la recommandation intitulée **Protéger les données sensibles référencées dans les réponses de Copilot et de l’assistant**.
+1. Dans **DSPM pour l’IA**, sélectionnez la recommandation intitulée **Protéger les données sensibles référencées dans les réponses de Copilot et des agents**.
 
-1. Dans le volet **Protéger les données sensibles référencées dans les réponses de Copilot et de l’agent**, examinez le résumé, puis sélectionnez **Accéder aux évaluations**.
+1. Dans le volet **Protéger les données sensibles référencées dans les réponses de Copilot et des agents**, examinez le résumé, puis sélectionnez **Accéder aux évaluations**.
 
 1. Sur la page **Évaluations des risques liés aux données**, sélectionnez **Créer une évaluation personnalisée**
 

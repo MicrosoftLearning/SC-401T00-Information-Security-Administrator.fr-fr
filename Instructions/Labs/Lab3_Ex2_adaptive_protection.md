@@ -12,7 +12,7 @@ Vous êtes Joni Sherman, administrateur de la sécurité des informations pour 
 
 1. Affecter une stratégie de risque interne à la protection adaptative
 1. Configurer les paramètres de protection adaptative pour votre stratégie DLP
-1. (Facultatif) Configurer l’accès conditionnel avec la protection adaptative
+1. Configurer l’accès conditionnel avec la protection adaptative
 1. Activer la protection adaptative
 
 ## Tâche 1 : affecter une stratégie de risque interne à la protection adaptative
@@ -60,7 +60,7 @@ Maintenant que la protection adaptative est liée à votre stratégie de risque 
 
 Vous avez mis à jour votre stratégie DLP pour bloquer le partage lorsque le risque interne est élevé, ce qui renforce la protection des données en fonction du comportement de l’utilisateur ou de l’utilisatrice.
 
-## Tâche 3 (facultative) : configurer l’accès conditionnel avec la protection adaptative
+## Tâche 3 - Configurer l’accès conditionnel avec la protection adaptative
 
 Pour ajouter une autre couche d’application, vous pouvez utiliser des niveaux de risque internes pour restreindre l’accès à l’aide de l’accès conditionnel. Dans cette tâche, vous allez créer une stratégie qui bloque l’accès aux utilisateurs avec un niveau de risque interne élevé.
 
@@ -68,11 +68,15 @@ Pour ajouter une autre couche d’application, vous pouvez utiliser des niveaux 
 
 1. Ouvrez une nouvelle fenêtre Microsoft Edge et accédez au **Centre d’administration Microsoft Entra** à l’adresse `https://entra.microsoft.com`. Connectez-vous en tant qu’**administrateur ou administratrice MOD**, `admin@WWLxZZZZZZ.onmicrosoft.com` (où ZZZZZZ est votre ID de locataire unique fourni par votre fournisseur d’hébergement de labo). Le mot de passe d’administration doit vous être fourni par votre fournisseur d’hébergement de labo.
 
-1. Sélectionnez **Suivant** dans la page **Plus d’informations requises**.
-
-1. Dans la page **Protéger votre compte**, suivez les invites pour configurer l’authentification multifacteur (MFA) à l’aide de Microsoft Authenticator ou d’une autre application d’authentification.
-
-   Une fois l’installation de l’authentification multifacteur terminée, vous faites l’objet d’une redirection vers le **Centre d’administration Microsoft Entra**.
+> [!note] **Note** : dans certains locataires, une invite d’activation MFA peut s’afficher lors de la connexion au portail. Si cette invite s’affiche :
+> - Sélectionnez **Reporter la MFA** pour différer temporairement la configuration de l’authentification multifacteur.
+>
+>   ![Capture d’écran montrant l’option de report de la MFA.](../Media/postpone-mfa.png)
+> - Sélectionnez **Confirmer le report**.
+>
+> - Sélectionnez **Poursuivre la connexion sans MFA** pour accéder à Microsoft Entra.
+>
+> Cela reporte l’activation de la MFA pour le locataire et vous permet de continuer le labo.
 
 1. Dans le centre d’administration Microsoft Entra, accédez à **Protection** > **Accès conditionnel** > **Stratégies**.
 
@@ -119,7 +123,7 @@ Dans cette dernière tâche, vous allez activer la protection adaptative afin qu
 
    - Sous l’onglet **Niveaux de risque interne**, la **stratégie rapide de fuites de données** est sélectionnée.
 
-   - Sous l’onglet **Accès conditionnel**, la stratégie **Bloquer tout accès pour une stratégie à risque élevé** est visible (facultatif).
+   - Dans l’onglet **Accès conditionnel**, la stratégie **Bloquer tout accès en cas de risque élevé** est visible.
 
    - Sous l’onglet **Protection contre la perte de données**, la **stratégie DLP de protection des cartes de crédit** est répertoriée.
 

@@ -78,8 +78,6 @@ Dans cette tâche, vous allez créer un nouveau type d’informations sensibles 
 
 1. À la page **Vérifier les paramètres et terminer**, passez en revue les paramètres, puis sélectionnez **Créer**. Une fois la création réussie, sélectionnez **Terminé**.
 
-1. Déconnectez-vous du compte de Joni en sélectionnant l’image de profil de Joni Sherman en haut à droite. Sélectionnez **Se déconnecter**, puis fermez la fenêtre du navigateur.
-
 Vous avez créé un nouveau type d’informations sensibles pour identifier les ID d’employés suivant le modèle de trois caractères majuscules, six nombres et les mots clés « Employé » ou « ID » dans une plage de 100 caractères.
 
 ## Tâche 2 : modifier le niveau de confiance pour réduire les faux positifs
@@ -109,6 +107,8 @@ Vous avez reçu des rapports indiquant que certains documents contenant des ID d
 1. Sélectionnez **Suivant** jusqu’à atteindre la page **Vérifier les paramètres et terminer**.
 
 1. Sélectionnez **Enregistrer**, puis **Terminé** pour mettre à jour votre type d’informations sensibles.
+
+1. Déconnectez-vous du compte de Joni en sélectionnant l’image de profil de Joni Sherman en haut à droite. Sélectionnez **Se déconnecter**, puis fermez la fenêtre du navigateur.
 
 Vous avez réduit avec succès le niveau de confiance de façon à augmenter la sensibilité de votre SIT personnalisé, ce qui vous permet de vous assurer que les documents dont le contenu présente une correspondance partielle sont plus susceptibles d’être marqués d’un indicateur.
 

@@ -86,7 +86,7 @@ Dans cette tâche, vous allez configurer une stratégie de rétention d’audit 
 
 1. Sélectionnez **Stratégies** dans la barre latérale gauche.
 
-1. Sur la page **Stratégies**, sélectionnez **Nouvelle stratégie de rétention d’audit**.
+1. Sur la page **Stratégies**, sélectionnez **Créer une stratégie de conservation des journaux d’audit**.
 
 1. Dans le panneau **Nouvelle stratégie de rétention d’audit**, entrez :
 

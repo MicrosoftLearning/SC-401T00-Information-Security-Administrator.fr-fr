@@ -361,7 +361,7 @@ Vous avez créé et publié une sous-étiquette à l’aide du chiffrement à cl
 
 ## Tâche 7 : activer l’intégration de Microsoft Purview dans Defender for Cloud Apps
 
-Dans cette tâche, vous allez activer l’intégration de Microsoft Purview à Microsoft Defender for Cloud Apps. Cela permet à Defender d’analyser de nouveaux fichiers pour les étiquettes de confidentialité Microsoft Purview et d’inspecter le contenu en fonction de ces étiquettes.
+Dans cette tâche, vous allez activer l’intégration de Microsoft Purview dans Microsoft Defender for Cloud Apps et activer la surveillance des fichiers. Cela permet à Defender d’analyser les fichiers nouveaux ou modifiés pour détecter les étiquettes de confidentialité issues de Microsoft Purview, d’inspecter leur contenu en fonction de ces étiquettes et de surveiller les fichiers afin que les stratégies de fichiers puissent être appliquées.
 
 1. Vous devez toujours avoir une connexion active à la machine virtuelle Client 1 (SC-401-CL1) en tant que **SC-401-CL1\admin** et vous devez toujours avoir une connexion active en tant que Joni Sherman.
 
@@ -385,11 +385,17 @@ Dans cette tâche, vous allez activer l’intégration de Microsoft Purview à M
 
 1. Sélectionnez **Enregistrer** pour appliquer les paramètres.
 
-Vous avez activé Defender for Cloud Apps pour reconnaître et analyser des fichiers pour les étiquettes de confidentialité de Microsoft Purview.
+1. Dans le volet gauche, sous la section **Protection des informations**, sélectionnez **Fichiers**.
+
+1. Sur la page **Fichiers**, sélectionnez **Activer la surveillance des fichiers**. 
+
+1. Sélectionnez **Enregistrer** pour appliquer les paramètres.
+
+Vous avez activé Defender for Cloud Apps pour analyser les fichiers à la recherche d’étiquettes de confidentialité et les surveiller afin que les stratégies puissent évaluer les fichiers et appliquer des actions de gouvernance.
 
 ## Tâche 8 : créer une stratégie de fichier pour étiqueter automatiquement des fichiers partagés en externe
 
-Maintenant que l’analyse des étiquettes est activée, vous allez créer une stratégie de fichier qui applique une étiquette de confidentialité générale aux nouveaux fichiers partagés en dehors de votre organisation.
+Maintenant que l’analyse des étiquettes est activée, vous allez créer une stratégie de fichier qui applique l’étiquette de confidentialité **Strictement confidentiel - Projet - Falcon** aux fichiers des dossiers Mark 8 Project partagés en dehors de votre organisation. Cette stratégie est classée comme DLP car elle protège les données sensibles contre toute exposition non intentionnelle.
 
 1. Dans **Microsoft Defender**, accédez à **Applications Cloud** > **Stratégies** > **Gestion des stratégies**.
 
@@ -399,11 +405,19 @@ Maintenant que l’analyse des étiquettes est activée, vous allez créer une s
 
 1. Dans la page **Créer une stratégie de fichier**, configurez :
 
-   - **Nom de la stratégie** : `Auto-label externally shared files`
+   - **Nom de la stratégie** : `Auto-label external sharing for Project Falcon files`
 
-   - **Gravité de la stratégie** : **faible**
+   - **Gravité de la stratégie** : **élevée**
 
    - **Catégorie** : **DLP**
+
+   - **Appliquer à** : **dossiers sélectionnés**
+
+      - Sélectionnez **Ajouter un ou plusieurs dossiers**, puis recherchez `Project`dans le champ **Nom du fichier**.
+
+      - Cochez les cases des dossiers SharePoint **Bloc-notes de l’équipe Mark 8 Project** et **Équipe Mark 8 Project**.
+
+      - Sélectionnez **Terminé** pour fermer la fenêtre **Sélectionner un dossier**.
 
    - Dans la **section Fichiers remplissant toutes les conditions suivantes** :
 
@@ -417,14 +431,14 @@ Maintenant que l’analyse des étiquettes est activée, vous allez créer une s
 
       - Cochez la case pour **Appliquer l’étiquette de confidentialité**.
 
-      - Dans la liste déroulante, sélectionnez **Général-Tout le monde (sans restriction)**.
+      - Dans le menu déroulant, sélectionnez **Strictement confidentiel - Projet - Falcon**
 
    - Répétez le même processus pour **Microsoft SharePoint Online**.
 
       - Cochez la case pour **Appliquer l’étiquette de confidentialité**.
 
-      - Sélectionnez **Hautement confidentiel-Project Falcon** dans la liste déroulante.
+      - Sélectionnez **Strictement confidentiel - Projet - Falcon** dans le menu déroulant
 
 1. Sélectionnez **Créer** pour terminer la création de la stratégie de fichier.
 
-Vous avez créé une stratégie de fichier qui applique une étiquette de confidentialité générale aux fichiers partagés en externe dans SharePoint et OneDrive. Une fois qu’un fichier correspondant est détecté, Defender for Cloud Apps applique automatiquement l’étiquette.
+Vous avez créé une stratégie de fichier qui applique une étiquette de confidentialité strictement confidentielle aux fichiers partagés en externe situés dans les dossiers Mark 8 Project dans SharePoint et OneDrive Une fois qu’un fichier correspondant est détecté, Defender for Cloud Apps applique automatiquement l’étiquette.

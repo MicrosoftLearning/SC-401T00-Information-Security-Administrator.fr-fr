@@ -22,7 +22,7 @@ Dans cette tâche, vous allez vérifier la fonctionnalité Azure RMS correcte de
 
 1. Vous devez toujours être connecté à la machine virtuelle Client 1 (SC-401-CL1) en tant que compte **SC-401-CL1\admin**.
 
-1. Ouvrez PowerShell en cliquant avec le bouton droit sur le bouton Démarrer dans la barre des tâches et en sélectionnant **Terminal**.
+1. Ouvrez PowerShell en cliquant avec le bouton droit sur le bouton Démarrer dans la barre des tâches, puis en sélectionnant **Terminal (Administrateur)**.
 
 1. Exécutez le cmdlet **Install Module** pour installer la dernière version du module **Exchange Online PowerShell** :
 
