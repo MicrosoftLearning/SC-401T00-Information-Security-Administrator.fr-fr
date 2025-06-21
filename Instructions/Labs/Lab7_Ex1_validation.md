@@ -28,9 +28,7 @@ Dans cette tâche, vous allez vérifier que les étiquettes de confidentialité 
 
 1. Vous devez toujours être connecté à la machine virtuelle Client 1 (SC-401-CL1) en tant que compte **SC-401-CL1\admin**, et connecté à Microsoft 365 en tant que **Joni Sherman**`JoniS@WWLxZZZZZZ.onmicrosoft.com` (où ZZZZZZZ est votre ID de locataire unique fourni par votre fournisseur d’hébergement de labo). Le mot de passe de Joni a été défini dans un exercice précédent.
 
-1. Dans Microsoft Edge, sélectionnez le lanceur d’applications en haut à gauche et choisissez **Word**.
-
-    ![Capture d’écran montrant où sélectionner Word dans le lanceur d’applications](../Media/meatball-menu-word.png)
+1. Dans Microsoft Edge, accédez à `https://word.office.com` et connectez-vous à Microsoft Office **Joni Sherman**`JoniS@WWLxZZZZZZ.onmicrosoft.com` (où ZZZZZZ correspond à l’identifiant de client unique fourni par votre fournisseur d’hébergement de labo). Le mot de passe de Joni a été défini dans un exercice précédent.
 
 1. Sélectionnez **Document vierge**.
 
@@ -46,7 +44,7 @@ Dans cette tâche, vous allez vérifier que les étiquettes de confidentialité 
 
     > [!Note] Un délai compris entre 24 et 48 heures peut s’écouler avant que les étiquettes de confidentialité nouvellement publiées ne soient disponibles pour l’application. Si les étiquettes de confidentialité nouvellement créées ne sont pas disponibles, vous pouvez utiliser **Confidential** > **All Employees** dans cet exercice.
 
-1. Remplacez l’étiquette de confidentialité par **Public** pour vérifier que la boîte de dialogue de justification métier s’affiche.
+1. Modifiez l’étiquette de confidentialité en **Hautement confidentiel** > **Projet - Falcon** pour vérifier que la boîte de dialogue de justification professionnelle s’affiche.
 
 1. Sélectionnez **Annuler** pour conserver l’étiquette de confidentialité.
 
