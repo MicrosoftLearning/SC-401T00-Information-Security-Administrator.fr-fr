@@ -37,6 +37,8 @@ Dans cette tâche, vous allez créer une stratégie DLP en mode simulation qui c
 
 1. Sur la page **Stratégies**, sélectionnez **+ Créer une stratégie** pour commencer la configuration de la création d’une stratégie de protection contre la perte de données.
 
+1. Sur la page **Choisissez le type de données à protéger**, sélectionnez **Données stockées dans des sources connectées**, puis sélectionnez **Suivant**.
+
 1. Sur la page **Démarrer avec un modèle ou créer une stratégie personnalisée**, sélectionnez **Personnalisé** pour la catégorie, puis sélectionnez **Stratégie personnalisée** dans **Réglementations**.
 
 1. Cliquez sur **Suivant**.
